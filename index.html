@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Commerce Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <img class="img1" src="https://img.freepik.com/premium-vector/electronics-logo-tamplate_883220-741.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class=" home nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class=" abo nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class=" pro nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class=" con nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    <form class="d-flex" role="search">
+      <input class=" input1 form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class=" btn1 btn btn-outline-success" type="submit">Search</button>
+    </form>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/carousel1.gif" class="a d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/carousel2.gif" class="b d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/carousel3.gif" class="c d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+    <div id="tsparticles" class="container">
+      <h1 class="text-center">All Products</h1>
+      <div id="allCards" class="mt-2 row row-cols-1 row-cols-md-3 g-4"></div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

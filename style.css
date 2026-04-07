@@ -1,0 +1,72 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    margin-top: -140px;
+    height: 145px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px 2px 2px 2px;
+    border-color: black;
+    position: fixed;
+    z-index: 1;
+}
+.img1{
+    height: 140px;
+    width: 130px;
+    border-color: black;
+}
+.home{
+    margin-left: 30px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.abo{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.pro{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.con{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.input1{
+    margin-top: 7px;
+    margin-left: 700px;
+}
+.btn1{
+    margin-top: 7px;
+}
+.new{
+    height: 650px;
+}
+.container{
+    margin-top: 100px;
+}
+.carousel{
+    margin-top: 140px;
+}
+.a{
+    height: 650px;
+}
+.b{
+    height: 650px;
+}
+.c{
+    height: 650px;
+}
+.card img{
+    height: 280px;
+    object-fit: contain;
+
+}

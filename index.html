@@ -8,34 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
     <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <img class="img1" src="https://img.freepik.com/premium-vector/electronics-logo-tamplate_883220-741.jpg?semt=ais_hybrid&w=740&q=80" alt="">
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class=" home nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class=" abo nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class=" pro nav-link" href="#">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class=" con nav-link" href="#">Contact</a>
-        </li>
-      </ul>
+<div class="navbar">
+    <div class="logo">ElectroShop</div>
+    <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./product.html">Product</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+</div>
     <form class="d-flex" role="search">
-      <input class=" input1 form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button class=" btn1 btn btn-outline-success" type="submit">Search</button>
+      <select onchange="productChange()" name="products" id="productMenu">
+      <option value="">Select Product</option>
+      </select>
+      <select onchange="filterProduct()" name="category" id="categoryMenu">
+      <option value="">Select Category</option>
+      </select>
+      <button class="btn btn-outline-success" type="submit">Search</button>
     </form>
     </div>
   </div>
-</nav>
+      </nav>
+</header>
+
 
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -62,9 +59,15 @@
 
 
     <div id="tsparticles" class="container">
-      <h1 class="text-center">All Products</h1>
-      <div id="allCards" class="mt-2 row row-cols-1 row-cols-md-3 g-4"></div>
+      <div class="row">
+        <div class="col-3" id="sidebar"></div>
+        <div class="col-9">
+            <h1 class="text-center">All Products</h1>
+          <div id="allCards" class="mt-2 row row-cols-1 row-cols-md-3 g-4"></div>
+        </div>
+      </div>
     </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="app.js"></script>

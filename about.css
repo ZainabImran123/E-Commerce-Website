@@ -1,0 +1,239 @@
+              body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #0a74da;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+      
+
+
+.img1{
+    height: 140px;
+    width: 130px;
+    border-color: black;
+}
+.home{
+    margin-left: 30px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.abo{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.pro{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.con{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.input1{
+    margin-top: 7px;
+    margin-left: 700px;
+}
+.btn1{
+    margin-top: 7px;
+}
+.new{
+    height: 650px;
+}
+.container{
+    margin-top: 100px;
+}
+.a{
+    height: 650px;
+}
+.b{
+    height: 650px;
+}
+.c{
+    height: 650px;
+}
+.card img{
+    height: 280px;
+    object-fit: contain;
+
+}
+#productMenu{
+    margin-left: 600px;
+    border-radius: 5px;
+    color: green;
+    border-color: green;
+}
+#productMenu:hover{
+    border-color: black;
+    color: black;
+    background-color: white;
+}
+#categoryMenu{
+    margin-left: 30px;
+    border-radius: 5px;
+    color: green;
+    border-color: green;
+}
+#categoryMenu:hover{
+    border-color: black;
+    color: black;
+    background-color: white;
+}
+.electro{
+    margin-top: 300px;
+}
+
+.btn{
+    margin-left: 30px;
+}
+#sidebar{
+    margin-top: 150px;
+}
+
+
+        .home{
+    margin-left: 30px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.abo{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.pro{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.con{
+    margin-left: 10px;
+    color: black;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+
+        .h1{
+            color: #0a74da;
+        }
+        .your{
+            color: #0a74da;
+        }
+
+
+        .hero {
+            background: url('https://via.placeholder.com/1600x400') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #0a74da;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .features {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature-box {
+            flex: 1 1 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .feature-box h3 {
+            color: #0a74da;
+        }
+
+        .team {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            flex: 1 1 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .team-member img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }

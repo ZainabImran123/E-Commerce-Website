@@ -363,6 +363,7 @@ for (var products in allProducts){
       <div class="card-body">
         <h5 class="card-title">${allProducts[products][categories][brands].name}</h5>
         <p class="card-text">${allProducts[products][categories][brands].description}</p>
+        <p class="card-text">${allProducts[products][categories][brands].button}</p>
       </div>
       <div class="card-footer">
         <small class="text-body-secondary">Price: ${allProducts[products][categories][brands].price}/-</small>
@@ -374,25 +375,26 @@ for (var products in allProducts){
     }
 
 
-(async () => {
-  await loadFountainPreset(tsParticles);
+var productMenu = document.getElementById("productMenu")
+var categoryMenu = document.getElementById("categoryMenu")
+for (var products in allProducts)
+    productMenu.innerHTML += `
+    <option value="${products}">${products}</option>
+`
+function productChange(){
+    categoryMenu.innerHTML = `
+      <option  value="">Select Category</option>`;
+        for (var categories in allProducts[productMenu.value]) {
+        categoryMenu.innerHTML += `<option value="${categories}">${categories}</option>`;
+}
+}
 
-  await tsParticles.load({
-    id: "tsparticles",
-    options: {
-      preset: "fountain",
-    },
-  });
-})();
-
-tsParticles.load({
-  id: "tsparticles",
-  options: {
-    particles: {
-      shape: {
-        type: "square", // starting from v2, this require the square shape script
-      },
-    },
-    preset: "fountain",
-  },
-});
+var sidebar = document.getElementById("sidebar")
+function filterProduct(){
+    sidebar.innerHTML=""
+    for(var brands in allProducts[productMenu.value][categoryMenu.value]){
+        console.log(allProducts[productMenu.value][categoryMenu.value][brands]);
+        sidebar.innerHTML+=`<h4>${brands}</h4>`
+        
+    }
+}

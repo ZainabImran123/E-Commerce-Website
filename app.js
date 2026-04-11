@@ -367,6 +367,24 @@ for (var products in allProducts){
       </div>
       <div class="card-footer">
         <small class="text-body-secondary">Price: ${allProducts[products][categories][brands].price}/-</small>
+        <button class="cart-btn" onclick="openForm()">Add to Cart 🛒</button>
+<div class="form-container" id="formContainer">
+  <div class="form-box">
+    <span class="close-btn" onclick="closeForm()"></span>
+    
+    <h2>Purchase Product</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Phone Number" required>
+
+      <button type="submit" class="submit-btn">Buy Now</button>
+    </form>
+  </div>
+</div>
+
       </div>
     </div>
   </div>`
@@ -377,24 +395,170 @@ for (var products in allProducts){
 
 var productMenu = document.getElementById("productMenu")
 var categoryMenu = document.getElementById("categoryMenu")
-for (var products in allProducts)
+for (var products in allProducts){
     productMenu.innerHTML += `
     <option value="${products}">${products}</option>
-`
+`;
+}
 function productChange(){
+    sidebar.style.display="none"
     categoryMenu.innerHTML = `
       <option  value="">Select Category</option>`;
+      allCards.innerHTML=""
         for (var categories in allProducts[productMenu.value]) {
         categoryMenu.innerHTML += `<option value="${categories}">${categories}</option>`;
+        for(var brands in allProducts[productMenu.value][categories]){
+            var itemDetails = allProducts[productMenu.value][categories][brands]
+
+                allCards.innerHTML += `
+                                <div class="col">
+          <div class="card h-100">
+            <img src="${itemDetails.src}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">${itemDetails.name.toUpperCase()}</h5>
+              <p class="card-text">
+               ${itemDetails.description}
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Price: ${itemDetails.price}/-</small>
+        
+<button class="new1" onclick="openForm()">Add to Cart 🛒</button>
+
+<div class="form-container" id="formContainer">
+  <div class="form-box">
+    <span class="close-btn" onclick="closeForm()"></span>
+    
+    <h2>Purchase Product</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Phone Number" required>
+
+      <button type="submit" class="submit-btn">Buy Now</button>
+    </form>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+
+`;
+
+                
+            }
+        }
 }
-}
+
 
 var sidebar = document.getElementById("sidebar")
 function filterProduct(){
     sidebar.innerHTML=""
+    sidebar.style.display="block";
+    sidebar.classList.remove("sidebar")
+    sidebar.classList.add("sidebar-sticky")
+    allCards.innerHTML = ""
     for(var brands in allProducts[productMenu.value][categoryMenu.value]){
-        console.log(allProducts[productMenu.value][categoryMenu.value][brands]);
-        sidebar.innerHTML+=`<h4>${brands}</h4>`
+        sidebar.innerHTML+=`<h5 onclick="filterBrands('${brands}')">${brands}</h5>`
+            var itemDetails = allProducts[productMenu.value][categoryMenu.value][brands]
+            allCards.innerHTML += `
+        <div class="col">
+          <div class="card h-100">
+            <img src="${itemDetails.src}" class="card-img-top" alt="..." />
+            <div class="card-body">
+            <h5 class="card-title">${itemDetails.name.toUpperCase()}</h5>
+              <p class="card-text">
+               ${itemDetails.description}
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">Price: ${itemDetails.price}/-</small>
+        <!-- Add to Cart Button -->
+<button class="new2" onclick="openForm()">Add to Cart 🛒</button>
+
+<!-- Purchase Form (Hidden by default) -->
+<div class="form-container" id="formContainer">
+  <div class="form-box">
+    <span class="close-btn" onclick="closeForm()"></span>
+    
+    <h2>Purchase Product</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Phone Number" required>
+
+      <button type="submit" class="submit-btn">Buy Now</button>
+    </form>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>`;
+
+        }        
+    }
+
+
+
+function filterBrands(brands){
+    allCards.innerHTML=""
+    var itemDetails = allProducts[productMenu.value][categoryMenu.value][brands]      
+
+        allCards.innerHTML+=`
+                <div class="col">
+          <div class="card h-100">
+            <img src="${itemDetails.src}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">${itemDetails.name.toUpperCase()}</h5>
+              <p class="card-text">
+               ${itemDetails.description}
+              </p> <hr>
+            <p class="card-text">
+               ${itemDetails.price}
+              </p>
+
+<button class="new2" onclick="openForm()">Add to Cart 🛒</button>
+
+<div class="form-container" id="formContainer">
+  <div class="form-box">
+    <span class="close-btn" onclick="closeForm()"></span>
+    
+    <h2>Purchase Product</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Phone Number" required>
+
+      <button type="submit" class="submit-btn">Buy Now</button>
+    </form>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>`;
+
         
     }
+
+
+function openForm() {
+  document.getElementById("formContainer").style.display = "flex";
+}
+
+function closeForm() {
+  document.getElementById("formContainer").style.display = "none";
+}
+
+function submitForm(event) {
+  event.preventDefault();
+  alert("Order placed successfully! 🎉");
+  closeForm();
 }
